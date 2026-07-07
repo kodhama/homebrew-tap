@@ -3,7 +3,7 @@
 # Reads are public — no token needed. Run from the tap repo root.
 set -euo pipefail
 
-repo="gundisalwa/trellis"
+repo="kodhama/trellis"
 tag="$(curl -fsSL "https://api.github.com/repos/${repo}/releases/latest" | jq -r .tag_name)"
 ver="${tag#v}"
 
@@ -20,7 +20,7 @@ cat > Formula/trellis.rb <<RB
 # (decision-0032); don't hand-edit the version / url / sha256 lines.
 class Trellis < Formula
   desc "Governance layer that supervises an agentic software-development process"
-  homepage "https://gundisalwa.github.io/trellis/"
+  homepage "https://kodhama.github.io/trellis/"
   version "${ver}"
   license "MIT"
 
